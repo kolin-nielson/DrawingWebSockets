@@ -1,0 +1,74 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f7fa;
+}
+
+#app {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.toolbar {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 0;
+  background-color: #9d9c9c;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  flex-wrap: wrap; /* Ensures wrapping of elements */
+}
+
+.tool-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+label {
+  font-size: 14px;
+  color: white;
+  margin-bottom: 5px; /* Space between label and input */
+}
+
+.color-picker, .slider, button, .clear-button {
+  height: 40px;
+  margin: 0 10px;
+}
+
+.color-picker {
+  width: 40px;
+}
+
+.slider {
+  width: 150px;
+}
+
+button, .clear-button {
+  padding: 0 20px;
+  font-size: 16px;
+  color: white;
+  background: #607D8B;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover, .clear-button:hover {
+  background-color: #455A64;
+}
+
+button.active {
+  background-color: #FFC107;
+  color: #333;
+}
+
+#whiteboard {
+  flex-grow: 1;
+  width: 100%;
+  background: #FFF;
+  border: 1px solid #ccc;
+}

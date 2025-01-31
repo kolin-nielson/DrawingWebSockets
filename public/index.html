@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Collaborative Whiteboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="app">
+    <div class="toolbar">
+      <div class="tool-item">
+        <label for="colorPicker">Color</label>
+        <input type="color" id="colorPicker" v-model="currentColor" @change="updateColor" class="color-picker">
+      </div>
+      <div class="tool-item">
+        <label for="brushSize">Brush Size</label>
+        <input type="range" id="brushSize" min="1" max="50" v-model="brushSize" @input="updateBrushSize" class="slider">
+      </div>
+      <button @click="setTool('pen')" :class="{'active': currentTool === 'pen'}">Pen</button>
+      <button @click="setTool('eraser')" :class="{'active': currentTool === 'eraser'}">Eraser</button>
+      <button @click="clearCanvas()" class="clear-button">Clear</button>
+    </div>
+    <canvas id="whiteboard"></canvas>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
