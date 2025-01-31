@@ -2,8 +2,6 @@
 
 A real-time collaborative drawing application that allows multiple users to draw simultaneously on a shared canvas using WebSockets. Features include different drawing tools, color selection, brush size adjustment, and instant canvas clearing.
 
-![Demo Screenshot](https://via.placeholder.com/800x400.png?text=Collaborative+Whiteboard+Demo) 
-*Add actual screenshot here*
 
 ## Features ✨
 - **Real-time collaboration** - See others' drawings instantly
